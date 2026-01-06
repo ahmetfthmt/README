@@ -25,6 +25,33 @@ public class PuzzlePlantIdentifier : Interactable
         plantRenderers = new Renderer[plants.Length];
         for (int i = 0; i < plants.Length; i++)
         {
+            if (plants[i] == null)
+            {
+#if UNITY_EDITOR
+                Debug.LogError($"[PuzzlePlantIdentifier] Plant at index {i} is null in '{name}'. Please assign all plant references.", this);
+#endif
+                plantRenderers[i] = null;
+                continue;
+            }
+
+            // Prefer a Renderer on the root, but fall back to children
+            var renderer = plants[i].GetComponent<Renderer>();
+            if (renderer == null)
+            {
+                renderer = plants[i].GetComponentInChildren<Renderer>();
+            }
+
+#if UNITY_EDITOR
+            if (renderer == null)
+            {
+                Debug.LogError($"[PuzzlePlantIdentifier] Plant '{plants[i].name}' has no Renderer on itself or its children.", plants[i]);
+            }
+#endif
+
+            plantRenderers[i] = renderer;
+        }
+        for (int i = 0; i < plants.Length; i++)
+        {
             plantRenderers[i] = plants[i].GetComponent<Renderer>();
         }
         
