@@ -17,11 +17,7 @@
   <a href="https://skillicons.dev" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> 
 </p>
 
-### ⚡ Stats
-
-![Stats](https://github-readme-stats.vercel.app/api?username=ahmetfthmt&show_icons=true&theme=tokyonight&hide_border=false)
 
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmetfthmt&theme=tokyonight&hide_border=false)
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=ahmetfthmt .ahmetfthmt &left_text=Profile Views&color=blue&style=flat)
-
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=ahmetfthmt.ahmetfthmt&left_text=Profile%20Views&color=blue&style=flat)
